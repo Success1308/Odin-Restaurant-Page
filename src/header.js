@@ -46,7 +46,22 @@ export default function createHeader() {
 
     rightDiv.append(envelopeIcon, searchIcon, locationIcon);
 
-    btnMenuDiv.append(logoImg, btnDiv, rightDiv);
+    const burgerItem = document.createElement('i');
+    burgerItem.className = 'fa-solid fa-bars burger';
+
+    btnMenuDiv.append(logoImg, btnDiv, burgerItem, rightDiv);
+
+    burgerItem.addEventListener('click', (event) => {
+        event.stopPropagation();
+        btnDiv.classList.toggle('show');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!btnMenuDiv.contains(event.target)) {
+            btnDiv.classList.remove('show');
+        }
+    });
+
     nav.append(btnMenuDiv);
     header.append(nav);
 
