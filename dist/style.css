@@ -49,70 +49,141 @@ body{
 	font-family: "Roboto", sans-serif;
 }
 
-.btn-menu{
-	height: 5rem;
-	width: 100vw;
-	background-color: rgba(33,31,32,255);
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 1rem;
-	font-size: 1.5rem;
-	border-bottom: 0.4rem solid #e9b641;
+
+.btn-menu {
+    height: 5rem;
+    width: 100vw;
+    background-color: rgba(33, 31, 32, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 0.4rem solid #e9b641;
 }
 
-.btn-menu > img:hover{
-	cursor: pointer;
+.btn-menu > img:hover {
+    cursor: pointer;
 }
 
-.btn-div{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 50%;
-}
-.btn-div>button{
-	background-color: transparent;
-	color: rgba(255, 255, 255, 0.841);
-	border: none;
-	font-size: 1.3rem;
+.btn-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
 }
 
-.btn-div>button:hover{
-	color: rgb(255, 255, 255);
-	cursor: pointer;
+.btn-div > button {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.841);
+    border: none;
+    font-size: 1.3rem;
 }
 
-.right-div{
-	display: flex;
-	align-items: center;
-	color: rgba(255, 255, 255, 0.841);
-}
-.right-div>i{
-	margin: 0 1rem ;
-	color: rgba(255, 255, 255, 0.841);
+.btn-div > button:hover {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
-.right-div>i:hover{
-	margin: 0 1rem ;
-	color: rgb(255, 255, 255);
-	cursor: pointer;
+.right-div {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.841);
+    gap: 10px;
 }
 
-#home-logo{
-	justify-content: center;
-	height: 150%;
-	max-height: 5rem;
-	width: auto;
-	margin-left: 1rem;
+.right-div > i {
+    margin: 0 1rem;
+    color: rgba(255, 255, 255, 0.841);
 }
 
-#content{
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	width: 100vw;
+.right-div > i:hover {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
 }
+
+#home-logo {
+    justify-content: center;
+    height: 150%;
+    max-height: 5rem;
+    width: auto;
+    margin-left: 1rem;
+}
+
+.burger{
+	display: none;
+}
+
+/* Media query for iPhone 15 Pro */
+@media only screen 
+  and (min-device-width: 390px) 
+  and (max-device-width: 400px) 
+  and (min-device-height: 844px) 
+  and (max-device-height: 860px) 
+  and (-webkit-device-pixel-ratio: 3) {
+
+    .right-div > i {
+        display: none;
+    }
+
+    .btn-div {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+		top: 80px; 
+        right: 10px;
+        background: #1e1e1e;
+        border: 1px solid #ccc;
+		width: 100vw;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        transform: translateY(-20px);
+        opacity: 0;
+        z-index: 1;
+    }
+
+	.btn-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 5rem; 
+        width: 100vw;
+        background-color: rgba(33, 31, 32, 255);
+        padding: 1rem;
+        font-size: 1.5rem;
+        border-bottom: 0.4rem solid #e9b641;
+    }
+    .btn-div.show {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .btn-menu .burger {
+        cursor: pointer;
+		
+    }
+
+	.btn-menu{
+		display: flex;
+	}
+	
+	.burger{
+		justify-self: flex-end;
+		margin-left: 10rem; 
+	}
+
+
+	
+
+}
+
+
+/* Media Query up */
+
+/* home */
 
 .hero{
 	background-image:  url(Assets/Hero.jpg);
@@ -654,5 +725,5 @@ button:hover {
 .phone > i {
 	margin: auto;
 	padding-left: 1rem;
-	color: #e9b641; 
+	color: #e9b641;
 }
