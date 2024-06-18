@@ -1,69 +1,69 @@
 // header.js
 
 export default function createHeader() {
-    const header = document.createElement('header');
-    const nav = document.createElement('nav');
-    const btnMenuDiv = document.createElement('div');
-    btnMenuDiv.className = 'btn-menu';
+  const header = document.createElement("header");
+  const nav = document.createElement("nav");
+  const btnMenuDiv = document.createElement("div");
+  btnMenuDiv.className = "btn-menu";
 
-    const logoImg = document.createElement('img');
-    logoImg.src = 'Assets/logo_transparent.png';
-    logoImg.id = 'home-logo';
-    logoImg.alt = 'logo';
+  const logoImg = document.createElement("img");
+  logoImg.src = "Assets/logo_transparent.png";
+  logoImg.id = "home-logo";
+  logoImg.alt = "logo";
 
-    const btnDiv = document.createElement('div');
-    btnDiv.className = 'btn-div';
+  const btnDiv = document.createElement("div");
+  btnDiv.className = "btn-div";
 
-    const homeBtn = document.createElement('button');
-    homeBtn.id = 'home-btn';
-    homeBtn.textContent = 'Home';
+  const homeBtn = document.createElement("button");
+  homeBtn.id = "home-btn";
+  homeBtn.textContent = "Home";
 
-    const menuBtn = document.createElement('button');
-    menuBtn.id = 'menu-btn';
-    menuBtn.textContent = 'Menu';
+  const menuBtn = document.createElement("button");
+  menuBtn.id = "menu-btn";
+  menuBtn.textContent = "Menu";
 
-    const aboutBtn = document.createElement('button');
-    aboutBtn.id = 'about-btn';
-    aboutBtn.textContent = 'About';
+  const aboutBtn = document.createElement("button");
+  aboutBtn.id = "about-btn";
+  aboutBtn.textContent = "About";
 
-    const contactBtn = document.createElement('button');
-    contactBtn.id = 'contact-btn';
-    contactBtn.textContent = 'Contact Us';
+  const contactBtn = document.createElement("button");
+  contactBtn.id = "contact-btn";
+  contactBtn.textContent = "Contact Us";
 
-    btnDiv.append(homeBtn, menuBtn, aboutBtn, contactBtn);
+  btnDiv.append(homeBtn, menuBtn, aboutBtn, contactBtn);
 
-    const rightDiv = document.createElement('div');
-    rightDiv.className = 'right-div';
+  const rightDiv = document.createElement("div");
+  rightDiv.className = "right-div";
 
-    const envelopeIcon = document.createElement('i');
-    envelopeIcon.className = 'fa-solid fa-envelope';
+  const envelopeIcon = document.createElement("i");
+  envelopeIcon.className = "fa-solid fa-envelope";
 
-    const searchIcon = document.createElement('i');
-    searchIcon.className = 'fa-solid fa-magnifying-glass';
+  const searchIcon = document.createElement("i");
+  searchIcon.className = "fa-solid fa-magnifying-glass";
 
-    const locationIcon = document.createElement('i');
-    locationIcon.className = 'fa-solid fa-location-dot';
+  const locationIcon = document.createElement("i");
+  locationIcon.className = "fa-solid fa-location-dot";
 
-    rightDiv.append(envelopeIcon, searchIcon, locationIcon);
+  rightDiv.append(envelopeIcon, searchIcon, locationIcon);
 
-    const burgerItem = document.createElement('i');
-    burgerItem.className = 'fa-solid fa-bars burger';
+  const burgerItem = document.createElement("i");
+  burgerItem.className = "fa-solid fa-bars burger";
 
-    btnMenuDiv.append(logoImg, btnDiv, burgerItem, rightDiv);
+  btnMenuDiv.append(logoImg, btnDiv, burgerItem, rightDiv);
 
-    burgerItem.addEventListener('click', (event) => {
-        event.stopPropagation();
-        btnDiv.classList.toggle('show');
-    });
+  burgerItem.addEventListener("click", (event) => {
+    event.stopPropagation();
+    btnDiv.classList.toggle("show");
+  });
 
-    document.addEventListener('click', (event) => {
-        if (!btnMenuDiv.contains(event.target)) {
-            btnDiv.classList.remove('show');
-        }
-    });
+  document.addEventListener("click", (event) => {
+    if (!btnMenuDiv.contains(event.target)) {
+      btnDiv.classList.remove("show");
+    }
+  });
 
-    nav.append(btnMenuDiv);
-    header.append(nav);
+  nav.append(btnMenuDiv);
+  header.append(nav);
 
-    return header;
+  return header;
 }

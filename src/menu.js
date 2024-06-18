@@ -1,16 +1,16 @@
 // src/menu.js
 
 function createMenu() {
-    const menuSectionMain = document.createElement('div');
-    menuSectionMain.classList.add('menu-section-main');
+  const menuSectionMain = document.createElement("div");
+  menuSectionMain.classList.add("menu-section-main");
 
-    const filterSection = document.createElement('section');
-    filterSection.classList.add('filter');
+  const filterSection = document.createElement("section");
+  filterSection.classList.add("filter");
 
-    const menuItemsSection = document.createElement('section');
-    menuItemsSection.classList.add('menu-section');
+  const menuItemsSection = document.createElement("section");
+  menuItemsSection.classList.add("menu-section");
 
-    const filterContent = `
+  const filterContent = `
         <div class="column">
             <img src="Assets/french-fries.svg" alt="Menu Item 1">
         </div>
@@ -34,7 +34,7 @@ function createMenu() {
         </div>
     `;
 
-    const menuItemsContent = `
+  const menuItemsContent = `
         <div class="menu-item">
             <img src="Assets/menu item/mcdonalds-hamburger product-header-desktop.jpg" alt="Menu Item 1">
             <h3>Hamburger</h3>
@@ -92,13 +92,13 @@ function createMenu() {
                 </div>
     `;
 
-    filterSection.innerHTML = filterContent;
-    menuItemsSection.innerHTML = menuItemsContent;
+  filterSection.innerHTML = filterContent;
+  menuItemsSection.innerHTML = menuItemsContent;
 
-    menuSectionMain.appendChild(filterSection);
-    menuSectionMain.appendChild(menuItemsSection);
+  menuSectionMain.appendChild(filterSection);
+  menuSectionMain.appendChild(menuItemsSection);
 
-    return menuSectionMain;
+  return menuSectionMain;
 }
 
 export default createMenu;

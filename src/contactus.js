@@ -1,9 +1,8 @@
+export default function ContactUsModule() {
+  const contactUsSection = document.createElement("section");
+  contactUsSection.classList.add("contact-us");
 
-export default function ContactUsModule(){
-    const contactUsSection = document.createElement('section');
-    contactUsSection.classList.add('contact-us');
-
-    const formHtml = `
+  const formHtml = `
         <h2>Contact Us</h2>
         <form action="/submit_form" method="post">
             <label for="name">Name:</label>
@@ -22,9 +21,7 @@ export default function ContactUsModule(){
         </div>
     `;
 
-    contactUsSection.innerHTML = formHtml;
+  contactUsSection.innerHTML = formHtml;
 
-
-    return contactUsSection
-    ;
-};
+  return contactUsSection;
+}
